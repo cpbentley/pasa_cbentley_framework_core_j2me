@@ -5,8 +5,8 @@ import pasa.cbentley.core.src4.interfaces.ITimeCtrl;
 import pasa.cbentley.framework.core.j2me.coredata.ctx.CoreDataJ2ME;
 import pasa.cbentley.framework.core.j2me.engine.CoordinatorJ2ME;
 import pasa.cbentley.framework.core.src4.ctx.CoreFrameworkCtx;
-import pasa.cbentley.framework.core.src4.interfaces.IHost;
-import pasa.cbentley.framework.core.src4.interfaces.IHostUITools;
+import pasa.cbentley.framework.core.src4.interfaces.IHostCore;
+import pasa.cbentley.framework.core.src4.interfaces.IHostCoreTools;
 import pasa.cbentley.framework.core.src4.interfaces.ILauncherHost;
 import pasa.cbentley.framework.coreio.src4.ctx.CoreIOCtx;
 import pasa.cbentley.framework.coreio.src4.file.IFileConnection;
@@ -56,12 +56,12 @@ public class CoreJ2MECtx extends CoreFrameworkCtx {
       return null;
    }
 
-   public IHost getHost() {
+   public IHostCore getHostCore() {
       // TODO Auto-generated method stub
       return null;
    }
 
-   public IHostUITools getHostTools() {
+   public IHostCoreTools getHostTools() {
       // TODO Auto-generated method stub
       return null;
    }

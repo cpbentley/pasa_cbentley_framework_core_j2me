@@ -1,12 +1,5 @@
 package pasa.cbentley.framework.core.j2me.utils;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
-
-
 /**
  * For SE Phones:
  * To find out what versions of the JSR-75 APIs are implemented in the phone:

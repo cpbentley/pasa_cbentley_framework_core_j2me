@@ -8,25 +8,19 @@ import pasa.cbentley.core.src4.ctx.UCtx;
 import pasa.cbentley.core.src4.logging.Dctx;
 import pasa.cbentley.core.src4.logging.IDLog;
 import pasa.cbentley.core.src4.logging.ILogConfigurator;
-import pasa.cbentley.core.src4.logging.LogJournal;
 import pasa.cbentley.framework.core.j2me.coredata.ctx.CoreDataJ2ME;
-import pasa.cbentley.framework.core.j2me.coredata.engine.J2MERMS;
 import pasa.cbentley.framework.core.j2me.ctx.CoreIOJ2Me;
 import pasa.cbentley.framework.core.j2me.ctx.CoreJ2MECtx;
 import pasa.cbentley.framework.core.src4.app.IAppli;
 import pasa.cbentley.framework.core.src4.app.IConfigApp;
 import pasa.cbentley.framework.core.src4.ctx.CoreFrameworkCtx;
 import pasa.cbentley.framework.core.src4.engine.CoordinatorAbstract;
-import pasa.cbentley.framework.core.src4.engine.LaunchValues;
 import pasa.cbentley.framework.core.src4.interfaces.ILauncherAppli;
 import pasa.cbentley.framework.core.src4.interfaces.ILauncherHost;
-import pasa.cbentley.framework.coredata.src4.ctx.CoreDataCtx;
 import pasa.cbentley.framework.coredata.src4.ctx.IConfigCoreData;
-import pasa.cbentley.framework.coredata.src4.db.IByteRecordStoreFactory;
 import pasa.cbentley.framework.coredata.src4.engine.ConfigManager;
 import pasa.cbentley.framework.coredraw.j2me.ctx.CoreDrawJ2MECtx;
 import pasa.cbentley.framework.coredraw.src4.ctx.IConfigCoreDraw;
-import pasa.cbentley.framework.coredraw.src4.interfaces.ITechDrawer;
 import pasa.cbentley.framework.coreio.src4.ctx.IConfigCoreIO;
 import pasa.cbentley.framework.coreui.j2me.ctx.CoreUiJ2MECtx;
 import pasa.cbentley.framework.coreui.src4.ctx.IConfigCoreUI;
@@ -133,13 +127,6 @@ public abstract class LaunchJ2ME extends MIDlet implements ILauncherHost, IConfi
 
    public void startAppli(ILauncherAppli launcherAppli) {
       coordinator.frameworkStart(launcherAppli);
-   }
-
-   /**
-    * Override this when needed
-    */
-   public void setLaunchValues(LaunchValues lv) {
-
    }
 
    public void setOSSpecifics(CoreFrameworkCtx hoc) {
