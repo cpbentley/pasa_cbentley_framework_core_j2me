@@ -20,7 +20,7 @@ public class CoordinatorJ2ME extends CoordinatorAbstract {
    }
 
    public Displayable getJ2MEDisplayable() {
-      CanvasJ2ME cb = (CanvasJ2ME) j2meCtx.getCUC().getRootCanvas();
+      CanvasJ2ME cb = (CanvasJ2ME) j2meCtx.getCUC().getCanvasRootHost();
       //might be null if appli does not create a canvas
       if (cb != null) {
          return cb.getDisplayable();
@@ -40,7 +40,7 @@ public class CoordinatorJ2ME extends CoordinatorAbstract {
       initUIThreadInside();
    }
 
-   public boolean loadLastState() {
+   public boolean subLoadLastState() {
       // TODO Auto-generated method stub
       return false;
    }
