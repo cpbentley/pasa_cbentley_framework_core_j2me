@@ -18,7 +18,6 @@ import pasa.cbentley.framework.core.src4.engine.CoordinatorAbstract;
 import pasa.cbentley.framework.core.src4.interfaces.ILauncherAppli;
 import pasa.cbentley.framework.core.src4.interfaces.ILauncherHost;
 import pasa.cbentley.framework.coredata.src4.ctx.IConfigCoreData;
-import pasa.cbentley.framework.coredata.src4.engine.ConfigManager;
 import pasa.cbentley.framework.coredraw.j2me.ctx.CoreDrawJ2MECtx;
 import pasa.cbentley.framework.coredraw.src4.ctx.IConfigCoreDraw;
 import pasa.cbentley.framework.coreio.src4.ctx.IConfigCoreIO;
@@ -41,8 +40,6 @@ public abstract class LaunchJ2ME extends MIDlet implements ILauncherHost, IConfi
 
    protected CoreJ2MECtx     cac;
 
-   private ConfigManager     cm;
-
    protected final BOCtx     boc;
 
    protected final UCtx      uc;
@@ -62,8 +59,6 @@ public abstract class LaunchJ2ME extends MIDlet implements ILauncherHost, IConfi
       CoreDataJ2ME dac = new CoreDataJ2ME(this, boc);
       IConfigApp appConfig = createConfigApp(uc);
       String storeName = appConfig.getAppName();
-      cm = new ConfigManager(dac, storeName);
-      cm.settingsRead();
 
       //load the config. depending how their values, it will override saved data
       IConfigCoreDraw configDraw = getConfigDraw();
@@ -91,11 +86,9 @@ public abstract class LaunchJ2ME extends MIDlet implements ILauncherHost, IConfi
    }
 
    public void appExit() {
-      cm.settingsWrite();
    }
 
    public void appPause() {
-      cm.settingsWrite();
    }
 
    public abstract IConfigCoreDraw getConfigDraw();
