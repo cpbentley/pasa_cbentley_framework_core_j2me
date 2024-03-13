@@ -265,7 +265,7 @@ public class J2MERecordStore implements IRecordStore {
    }
 
    public UCtx toStringGetUCtx() {
-      return dd.getUCtx();
+      return dd.getUC();
    }
 
    //#enddebug

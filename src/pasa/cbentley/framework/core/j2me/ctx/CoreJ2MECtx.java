@@ -22,7 +22,7 @@ public class CoreJ2MECtx extends CoreFrameworkCtx {
    private CoordinatorJ2ME       coordinatorSwing;
 
    public CoreJ2MECtx(CoreUiJ2MECtx cuc, CoreDataJ2ME dac, CoreIOCtx cioc, ILauncherHost launcher) {
-      super(new CoreConfigJ2ME(cuc.getUCtx()), cuc, dac, cioc, launcher);
+      super(new CoreConfigJ2ME(cuc.getUC()), cuc, dac, cioc, launcher);
       this.cuc = cuc;
    }
 

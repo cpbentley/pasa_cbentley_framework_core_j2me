@@ -163,7 +163,7 @@ public abstract class LaunchJ2ME extends MIDlet implements ILauncherHost, IConfi
    }
 
    public UCtx toStringGetUCtx() {
-      return cac.getUCtx();
+      return cac.getUC();
    }
 
    //#enddebug
