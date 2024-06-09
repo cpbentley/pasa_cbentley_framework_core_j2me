@@ -15,7 +15,7 @@ import pasa.cbentley.framework.core.src4.app.IAppli;
 import pasa.cbentley.framework.core.src4.app.IConfigApp;
 import pasa.cbentley.framework.core.src4.ctx.CoreFrameworkCtx;
 import pasa.cbentley.framework.core.src4.engine.CoordinatorAbstract;
-import pasa.cbentley.framework.core.src4.interfaces.ILauncherAppli;
+import pasa.cbentley.framework.core.src4.interfaces.ICreatorAppli;
 import pasa.cbentley.framework.core.src4.interfaces.ILauncherHost;
 import pasa.cbentley.framework.coredata.src4.ctx.IConfigCoreData;
 import pasa.cbentley.framework.coredraw.j2me.ctx.CoreDrawJ2MECtx;
@@ -74,12 +74,12 @@ public abstract class LaunchJ2ME extends MIDlet implements ILauncherHost, IConfi
    }
 
    /**
-    * Creates the {@link ILauncherAppli} for the {@link IAppli}.
+    * Creates the {@link ICreatorAppli} for the {@link IAppli}.
     * The launcher will have the host configuration and create its specific
     * {@link IConfigApp}
     * @return
     */
-   protected abstract ILauncherAppli createLauncher(UCtx uc);
+   protected abstract ICreatorAppli createLauncher(UCtx uc);
 
    public CoordinatorAbstract getCoordinator() {
       return coordinator;
@@ -118,7 +118,7 @@ public abstract class LaunchJ2ME extends MIDlet implements ILauncherHost, IConfi
       return new LoggingConfigJ2ME(cac);
    }
 
-   public void startAppli(ILauncherAppli launcherAppli) {
+   public void startAppli(ICreatorAppli launcherAppli) {
       coordinator.frameworkStart(launcherAppli);
    }
 
@@ -131,7 +131,7 @@ public abstract class LaunchJ2ME extends MIDlet implements ILauncherHost, IConfi
     * {@link MIDlet} method called by the J2ME framework
     */
    protected void startApp() throws MIDletStateChangeException {
-      ILauncherAppli la = createLauncher(uc);
+      ICreatorAppli la = createLauncher(uc);
       startAppli(la );
    }
 
