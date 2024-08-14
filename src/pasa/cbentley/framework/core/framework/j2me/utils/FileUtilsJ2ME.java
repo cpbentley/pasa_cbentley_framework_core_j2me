@@ -1,4 +1,4 @@
-package pasa.cbentley.framework.core.j2me.utils;
+package pasa.cbentley.framework.core.framework.j2me.utils;
 
 /**
  * For SE Phones:

@@ -1,26 +1,26 @@
-package pasa.cbentley.framework.core.j2me.engine;
+package pasa.cbentley.framework.core.framework.j2me.engine;
 
 import javax.microedition.lcdui.Displayable;
 import javax.microedition.midlet.MIDlet;
 
-import pasa.cbentley.framework.core.j2me.ctx.CoreJ2MECtx;
-import pasa.cbentley.framework.core.src4.engine.CoordinatorAbstract;
-import pasa.cbentley.framework.coreui.j2me.engine.CanvasJ2ME;
+import pasa.cbentley.framework.core.framework.j2me.ctx.CoreFrameworkJ2meCtx;
+import pasa.cbentley.framework.core.framework.src4.engine.CoordinatorAbstract;
+import pasa.cbentley.framework.core.ui.j2me.engine.CanvasJ2me;
 
-public class CoordinatorJ2ME extends CoordinatorAbstract {
+public class CoordinatorJ2me extends CoordinatorAbstract {
 
-   protected final CoreJ2MECtx j2meCtx;
+   protected final CoreFrameworkJ2meCtx j2meCtx;
 
-   private LaunchJ2ME          launcherJ2ME;
+   private LauncherJ2meMIDlet          launcherJ2ME;
 
-   public CoordinatorJ2ME(CoreJ2MECtx j2meCtx, LaunchJ2ME launcherJ2ME) {
+   public CoordinatorJ2me(CoreFrameworkJ2meCtx j2meCtx, LauncherJ2meMIDlet launcherJ2ME) {
       super(j2meCtx, launcherJ2ME);
       this.j2meCtx = j2meCtx;
       this.launcherJ2ME = launcherJ2ME;
    }
 
    public Displayable getJ2MEDisplayable() {
-      CanvasJ2ME cb = (CanvasJ2ME) j2meCtx.getCUC().getCanvasRootHost();
+      CanvasJ2me cb = (CanvasJ2me) j2meCtx.getCUC().getCanvasRootHost();
       //might be null if appli does not create a canvas
       if (cb != null) {
          return cb.getDisplayable();
@@ -32,7 +32,7 @@ public class CoordinatorJ2ME extends CoordinatorAbstract {
       return launcherJ2ME;
    }
 
-   public LaunchJ2ME getLauncherJ2ME() {
+   public LauncherJ2meMIDlet getLauncherJ2ME() {
       return launcherJ2ME;
    }
 
