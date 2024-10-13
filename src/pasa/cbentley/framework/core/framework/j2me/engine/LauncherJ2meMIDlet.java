@@ -33,10 +33,7 @@ import pasa.cbentley.framework.coredraw.src4.ctx.IConfigCoreDraw;
 
 /**
  * Hosts the {@link MIDlet} reference.
- * <br>
  * Compared to Swing or SWT, the Launcher is a MIDLET.
- * <br>
- * <br>
  * 
  * @author Charles Bentley
  *
@@ -173,6 +170,7 @@ public abstract class LauncherJ2meMIDlet extends MIDlet implements ILauncherHost
     * 
     */
    protected void pauseApp() {
+      coordinator.getAppli().amsAppPause();
       coordinator.frameworkPause();
    }
 

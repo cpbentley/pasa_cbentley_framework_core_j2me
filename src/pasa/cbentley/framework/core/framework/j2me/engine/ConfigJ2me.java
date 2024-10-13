@@ -12,6 +12,7 @@ import pasa.cbentley.framework.core.framework.src4.ctx.IConfigCoreFramework;
 import pasa.cbentley.framework.core.io.src4.ctx.IConfigCoreIO;
 import pasa.cbentley.framework.core.ui.src4.ctx.IConfigCoreUi;
 import pasa.cbentley.framework.coredraw.src4.ctx.IConfigCoreDraw;
+import pasa.cbentley.framework.coredraw.src4.interfaces.ITechFont;
 
 public abstract class ConfigJ2me extends ConfigAbstract implements IConfigCoreDraw, IConfigCoreUi, IConfigCoreFramework, IConfigCoreIO, IConfigCoreData, IConfigU, IConfigBOC {
 
@@ -32,6 +33,14 @@ public abstract class ConfigJ2me extends ConfigAbstract implements IConfigCoreDr
       return null;
    }
 
+   public int getDefaultFontSize() {
+      return ITechFont.SIZE_3_MEDIUM;
+   }
+
+   public boolean isUsingFontCache() {
+      return true;
+   }
+
    public boolean isFullscreen() {
       return true;
    }
@@ -39,7 +48,6 @@ public abstract class ConfigJ2me extends ConfigAbstract implements IConfigCoreDr
    public void postProcessing(ByteObject settings, ABOCtx ctx) {
 
    }
-   
 
    public IConfigBOC getConfigBOC() {
       return this;
